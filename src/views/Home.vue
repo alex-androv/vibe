@@ -1,6 +1,6 @@
 <template>
   <div>
-    <afisha-item v-for="item in items" :item="item" :key="item.id"/>
+    <afisha-item v-for="(item, index) in afishaItems" :item="item" :key="index" :id="index"/>
   </div>
 </template>
 
@@ -11,12 +11,11 @@ export default {
   components: {
     AfishaItem,
   },
-    data: () => ({
-      items: [
-        {id:1, day: 'ВТ', time: '19:00', date: 13, month: 'декабрь', band: 'название группы', desc: 'Короткое описание мероприятия', link: 'https://translate.google.com/?hl=ru'},
-        {id:2, day: 'ср', time: '18:00', date: 14, month: 'декабрь', band: 'ТНФ', desc: 'рок кованых сапог', link: 'https://tailwindcss.com/docs/align-items'},
-    ]
-    }),
+  computed: {
+    afishaItems() {
+      return this.$store.getters.afishaItems;
+      },
+    } 
 }
 </script>
 
