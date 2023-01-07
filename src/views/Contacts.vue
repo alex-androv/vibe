@@ -19,5 +19,8 @@
         <a class="uppercase text-sm font-medium" href="https://vk.com/vibemoscow" target="blank">vk.com/vibemoscow</a>
       </div>
     </div>
+    <div class="mt-10">
+      <img src="@/assets/img/kal.jpg" >
+    </div>
   </div>
 </template>
